@@ -1,4 +1,5 @@
 ﻿@model Catalog;
+<p>Using ViewData: @ViewData["imagePath"]</p>  
 
 @{
 	ViewData["Title"] = "Products Page";
@@ -6,5 +7,7 @@
 
 @foreach (var product in Model.Products)
 {
-	<div>Id:@product.Id, Name:@product.Name @product.Image </div>
+	<div>Id: @product.Id<br/>
+		Name: @product.Name <br/>
+		<img src=@(ViewData["imagePath"]+product.Image)/></div>
 }

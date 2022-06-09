@@ -1,5 +1,4 @@
 ﻿@model Catalog;
-<p>Using ViewData: @ViewData["imagePath"]</p>  
 
 @{
 	ViewData["Title"] = "Products Page";
@@ -10,4 +9,5 @@
 	<div>Id: @product.Id<br/>
 		Name: @product.Name <br/>
 		<img src=@(ViewData["imagePath"]+product.Image)/></div>
+		<hr/>
 }

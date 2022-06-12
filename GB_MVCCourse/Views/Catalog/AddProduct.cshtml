@@ -1,0 +1,15 @@
+﻿@model Catalog;
+
+@{
+	ViewData["Title"] = "Add products";
+}
+
+<form method="post">
+	Id: <input type="text" name="id" required />
+	<br/>
+	Имя: <input type="text" name="name" required/>
+	<br/>
+	Картинка: <input type="text" name="image"/>
+	<br/>
+	<input type="submit" name="submit" value="Создать" />
+</form>

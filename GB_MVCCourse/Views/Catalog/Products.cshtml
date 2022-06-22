@@ -4,10 +4,11 @@
 	ViewData["Title"] = "Products Page";
 }
 
-@foreach (var product in Model.Products)
+@foreach (var product in Model.Products.Items)
 {
 	<div>Id: @product.Id<br/>
 		Name: @product.Name <br/>
-		<img src=@(ViewData["imagePath"]+product.Image)/></div>
+		<img src="/img/@product.Image" />
+		</div>
 		<hr/>
 }

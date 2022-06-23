@@ -1,0 +1,14 @@
+﻿@model Catalog;
+
+@{
+	ViewData["Title"] = "Products Page";
+}
+
+@foreach (var product in Model.Products.Items)
+{
+	<div>Id: @product.Id<br/>
+		Name: @product.Name <br/>
+		<img src="/img/@product.Image" />
+		</div>
+		<hr/>
+}
